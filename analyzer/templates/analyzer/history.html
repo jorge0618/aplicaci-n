@@ -1,0 +1,9 @@
+<h2>Historial de archivos subidos</h2>
+<ul>
+    {% for f in files %}
+        <li>{{ f.name }} — {{ f.uploaded_at }}</li>
+    {% empty %}
+        <p>No has subido archivos aún.</p>
+    {% endfor %}
+</ul>
+<a href="{% url 'menu' %}">Volver al menú</a>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h2>Bienvenido, {{ request.user.username }}</h2>
+    <p>Selecciona una opción:</p>
+
+    <div class="d-grid gap-2 col-6 mx-auto mt-4">
+        <a href="{% url 'upload' %}" class="btn btn-primary btn-lg">Subir archivo</a>
+        <a href="{% url 'dashboard' %}" class="btn btn-success btn-lg">Ver análisis</a>
+        <a href="{% url 'history' %}" class="btn btn-secondary btn-lg">Historial de archivos</a>
+    </div>
+</div>
+{% endblock %}
